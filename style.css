@@ -1,0 +1,178 @@
+/*
+Background: Light Gray (#F5F5F5)
+Primary Text: Dark Gray (#333333)
+Accent Color: Teal (#008080)
+*/
+
+:root {
+    /* CSS Variables for colors and borders */
+    --background-color: #F5F5F5;
+    --primary-text-color: #333333;
+    --accent-color: #008080;
+    --fallback-border-color: #CCCCCC;
+}
+
+body {
+    /* General body styling */
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background-color);
+    margin: 5%;
+}
+
+h1 {
+    /* Main heading styling */
+    color: back;
+    font-size: 2em;
+    text-align: center;
+}
+
+.vid_container {
+    /* Video container styling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+
+    p {
+        /* Text inside video container */
+        color: var(--primary-text-color);
+        font-size: 1.5em;
+        text-align: center;
+        width: 40%;
+        border-width: 2px;
+        border-style: solid;
+        padding: 2%;
+        border-radius: 10px;
+    }
+}
+
+#panda_vid {
+    /* Video element styling */
+    height: auto;
+    width: 20%; 
+    justify-self: center;
+    margin: 0 10%; 
+    border-radius: 10px;
+}
+
+nav {
+    /* Navigation bar styling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        /* Links in the navigation */
+        color: #015454;
+        font-weight: normal;
+        margin: 0 auto;
+        text-decoration: none;
+        border-style: solid;
+        padding: 1.5%;
+        border-radius: 10px;
+    }
+
+    a:visited {
+        /* Visited link color */
+        color: var(--accent-color);
+    }
+}
+
+form {
+    /* Form container styling */
+    background-color: var(--background-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+}
+
+fieldset {
+    /* Fieldset styling */
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    /* Legend text styling */
+    color: var(--primary-text-color);
+    font-weight: bold;
+}
+
+input[type="text"], textarea, select, input[list] {
+    /* Input and textarea styling */
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--background-color);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="checkbox"] {
+    /* Checkbox styling */
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button {
+    /* Button styling */
+    background-color: var(--accent-color);
+    color: #FFFFFF; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    /* Button hover effect */
+    background-color: #005959;
+}
+
+.meeting-card {
+    /* Meeting card container styling */
+    background-color: var(--background-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-title {
+    /* Title section in meeting card */
+    position: relative;
+}
+
+.image-meeting {
+    /* Image in meeting card */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: auto;
+}
+
+strong, i, em {
+    /* Styling for emphasized text */
+    color: #008080;
+}
+
+@media (max-width: 768px) {
+    /* Responsive styling for smaller screens */
+    .meeting-card {
+        padding: 10px;
+    }
+
+    #panda_vid {
+        width: 50%;
+    }
+}

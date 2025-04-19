@@ -4,141 +4,149 @@
         <title>Wyatt's Meeting Minutes</title>
         <meta charset="utf-8">    
         <link rel="icon" href="favicon.ico"/>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <header>
+    <header id="top">
         <h1>Wyatt's Meeting Minutes</h1>
-        <video width="400" controls>
-            <source src="video/9c01347bee1fc3b61fc1802ac140e857.mp4" type="video/mp4">
-        </video>
-        <p> Some personal links:</p>
-        <nav>
-            <a href="https://www.linkedin.com/in/wyatt-fong-1a5375268/"><b>LinkedIn</b></a>
-            <a href="https://github.com/wyatt-fong"><b>Github</b></a>
-        </nav>
     </header>
     <br>
     <hr>
     <br>
-    <section>
-        <h2>Document meeting minutes:</h2>
-        <form>
-            <fieldset>
-                <legend>Topic</legend>
-                <input type="text" value="Introductions"><br> 
-            </fieldset>
-            <fieldset>
-                <legend>Date</legend>
-                <input type="text" value="Janurary 1, 2025"><br>
-            </fieldset>
-            <fieldset>
-                <legend> Parcipants</legend>
-                <input type="checkbox">
-                <label>Darren</label> <br>
-                <input type="checkbox">
-                <label>Steven</label> <br>
-                <input type="checkbox">
-                <label>Ronald</label> <br>
-                <input type="checkbox">
-                <label>Wyatt</label> <br>
-                <input type="checkbox">
-                <label>Calvin</label> <br>
-            </fieldset>
-            <fieldset>
-                <legend>Comments</legend>
-                <textarea rows="4" cols="50">Comments about the meeting</textarea>
-            </fieldset>
-            <label>Quality of Meeting:</label>
-            <input list="type_meeting"><br>
-            <datalist id="type_meeting">
-                <option value="Productive Meeting"></option>
-                <option value="NonProductive Meeting"></option>
-                <option value="Leisurely Meeting"></option>
-            </datalist>
-            <label>All topics discussed?</label>
-            <select>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select> <br> <br>
-            <button>
-                Submit
-            </button>
-        </form>
-    </section>
-    <br>
-    <hr>
-    <br>
-    <section>
-        <img src="images/team_formation.jpeg" alt="team formation image" width="300" height="200">
-        <div>
-            <h2>Team Formation</h2>
+    <body>
+        <section>
+            <h2>Document meeting minutes:</h2>
+            <form>
+                <fieldset>
+                    <legend>Topic</legend>
+                    <input type="text" value="Introductions"><br> 
+                </fieldset>
+                <fieldset>
+                    <legend>Date</legend>
+                    <input type="text" value="January 1, 2025"><br>
+                </fieldset>
+                <fieldset>
+                    <legend> Parcipants</legend>
+                    <input type="checkbox">
+                    <label>Darren</label> <br>
+                    <input type="checkbox">
+                    <label>Steven</label> <br>
+                    <input type="checkbox">
+                    <label>Ronald</label> <br>
+                    <input type="checkbox">
+                    <label>Wyatt</label> <br>
+                    <input type="checkbox">
+                    <label>Calvin</label> <br>
+                    <input type="checkbox">
+                    <label>Declan</label> <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Comments</legend>
+                    <textarea rows="4" cols="50">Comments about the meeting</textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Upload Meeting Image</legend>
+                    <label for="meeting-image">Choose an image:</label>
+                    <input type="file" id="meeting-image" name="meeting-image" accept="image/*">
+                </fieldset>
+                <label>Quality of Meeting:</label>
+                <input list="type_meeting"><br>
+                <datalist id="type_meeting">
+                    <option value="Productive Meeting"></option>
+                    <option value="NonProductive Meeting"></option>
+                    <option value="Leisurely Meeting"></option>
+                </datalist>
+                <label>All topics discussed?</label>
+                <select>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select> <br> <br>
+                <button>
+                    Submit
+                </button>
+            </form>
+        </section>
+        <br>
+        <hr>
+        <br>
+        <section class="meeting-card">
+            <div class="meeting-title">
+                <h2>Team Formation</h2>
+                <img class="image-meeting" src="images/team_formation.jpeg" alt="team formation image" width="300" height="200">
+            </div>
+            <h3>Date: <span> March 14, 2025</span></h3>
+            <h3>Attendees:</h3>
+            <ul>
+                <li>Wyatt</li>
+                <li>Ronald</li>
+                <li>Calvin</li>
+                <li>Steven</li>
+            </ul>
+            <h3> Agenda </h3>
+            <ol>
+                <li>
+                    Finish Unfinished Tasks
+                    <ul>
+                        <li>Missing Introductions</li>
+                        <li>Future Plans</li>
+                    </ul>
+                </li>
+                <li>Individual and Team Analysis</li>
+            </ol>
+            <h3>Comments</h3>
+            <ul>
+                <li>
+                    Darren unable to attend due to <i>illness</i>
+                    <ul>
+                        <li>Bring Darren up to speed <strong><em>ASAP</em></strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <br>
+        <hr>
+        <br>
+        <section class="meeting-card">
+            <div class="meeting-title">
+                <h2>Introductions</h2>
+                <img class="image-meeting" src="images/intros.jpg" alt="Intro image" width="400" height="200">
+            </div>
+            <h3>Date: <span> March 12, 2025</span></h3>
+            <h3>Attendees:</h3>
+            <ul>
+                <li>Declan</li> 
+                <li>Ronald</li>
+                <li>Calvin</li>
+                <li>Darren</li>
+            </ul>
+            <h3> Agenda </h3>
+            <ol>
+                <li>Introductions</li>
+                <li>Ice Breaker</li>
+                <li>Team Logistics</li>
+                <li>Future Plans</li>
+            </ol>
+            <h3> Comments</h3>
+            <ul>
+                <li>
+                    Steven could not make this meeting due to <i>scheduling conflict</i> with another team
+                    <ul>
+                        <li>Get his introduction during <strong><em>next meeting</em></strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </body>
+    <footer>
+        <div class="vid_container">
+            <video id="panda_vid" width="400" controls>
+                <source src="video/9c01347bee1fc3b61fc1802ac140e857.mp4" type="video/mp4">
+            </video>
+            <p> Keep a positive outlook like our little panda friend 😄🐼</p>
         </div>
-        <h3>Date: <span> March 14, 2025</span></h3>
-        <h3>Attendees:</h3>
-        <ul>
-            <li>Wyatt</li>
-            <li>Ronald</li>
-            <li>Calvin</li>
-            <li>Steven</li>
-        </ul>
-        <h3> Agenda </h3>
-        <ol>
-            <li>
-                Finish Unfinished Tasks
-                <ul>
-                    <li>Missing Introductions</li>
-                    <li>Future Plans</li>
-                </ul>
-            </li>
-            <li>Individual and Team Analysis</li>
-        </ol>
-        <h3>Comments</h3>
-        <ul>
-            <li>
-                Darren unable to attend due to <i>illness</i>
-                <ul>
-                    <li>Bring Darren up to speed <strong><em>ASAP</em></strong></li>
-                </ul>
-            </li>
-        </ul>
-        <audio controls>
-            <source src="audio/mixkit-small-crowd-clapping-3035.wav" type="audio/wav">
-        </audio>
-    </section>
-    <br>
-    <hr>
-    <br>
-    <section>
-        <img src="images/intros.jpg" alt="Intro image" width="400" height="200">
-        <div>
-            <h2>Introductions</h2>
-        </div>
-       
-        <h3>Date: <span> March 12, 2025</span></h3>
-        <h3>Attendees:</h3>
-        <ul>
-            <li>Wyatt</li> 
-            <li>Ronald</li>
-            <li>Calvin</li>
-            <li>Darren</li>
-        </ul>
-        <h3> Agenda </h3>
-        <ol>
-            <li>Introductions</li>
-            <li>Ice Breaker</li>
-            <li>Team Logistics</li>
-            <li>Future Plans
-        </ol>
-        <h3> Comments</h3>
-        <ul>
-            <li>
-                Steven could not make this meeting due to <i>scheduling conflict</i> with another team
-                <ul>
-                    <li>Get his introduction during <strong><em>next meeting</em></strong></li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-    <br>
-    <hr>
-    <br>
+        <nav>
+            <a href="https://www.linkedin.com/in/wyatt-fong-1a5375268/"><b>LinkedIn</b></a>
+            <a href="https://github.com/wyatt-fong"><b>Github</b></a>
+            <a href="#top">Return to Top</a>
+        </nav>
+    </footer>
 </html>
