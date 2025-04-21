@@ -4,26 +4,47 @@ Primary Text: Dark Gray (#333333)
 Accent Color: Teal (#008080)
 */
 
+
+*{
+    font-family: "Raleway", sans-serif;
+}
+
 :root {
     /* CSS Variables for colors and borders */
-    --background-color: #F5F5F5;
-    --primary-text-color: #333333;
-    --accent-color: #008080;
+    --background-color: white;
+    --primary-text-color: rgb(51, 51, 51);
+    --accent-color: hsl(180, 100%, 25%);
+    --alt-accent-color: color-mix(in hsl, hsl(180, 100%, 40%), white);
     --fallback-border-color: #CCCCCC;
+    --secondary-text-color: rgb(102, 102, 102); 
 }
 
 body {
     /* General body styling */
-    font-family: Arial, Helvetica, sans-serif;
     background: var(--background-color);
-    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 h1 {
     /* Main heading styling */
-    color: back;
+    color: black;
     font-size: 2em;
     text-align: center;
+}
+
+fieldset ~ fieldset {
+    margin-top: 20px; /* Add spacing between fieldsets */
+}
+
+/* Adjacent Sibling Combinator */
+h2 + p {
+    font-style: italic; /* Make the text italic */
+    color: var(--secondary-text-color); /* Use secondary text color */
 }
 
 .vid_container {
@@ -32,49 +53,53 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: 2%;
+}
 
-    p {
-        /* Text inside video container */
-        color: var(--primary-text-color);
-        font-size: 1.5em;
-        text-align: center;
-        width: 40%;
-        border-width: 2px;
-        border-style: solid;
-        padding: 2%;
-        border-radius: 10px;
-    }
+.vid_container p {
+    color: var(--primary-text-color);
+    font-size: 1.5em;
+    text-align: center;
+    width: 40%;
+    border-width: 2px;
+    border-style: solid;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+
+.vid_container:has(video) {
+    border: 3px solid var(--accent-color);
+    padding: 15px;
 }
 
 #panda_vid {
     /* Video element styling */
     height: auto;
-    width: 20%; 
+    width: 20vw; 
     justify-self: center;
     margin: 0 10%; 
     border-radius: 10px;
 }
 
 nav {
-    /* Navigation bar styling */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    gap: 20px;
+    padding: 10px;
 
-    a {
-        /* Links in the navigation */
+    & > a {
         color: #015454;
-        font-weight: normal;
-        margin: 0 auto;
         text-decoration: none;
-        border-style: solid;
-        padding: 1.5%;
+        border: 2px solid var(--accent-color);
+        padding: 10px 15px;
         border-radius: 10px;
+        transition: background-color 0.3s ease;
     }
 
-    a:visited {
-        /* Visited link color */
-        color: var(--accent-color);
+    & > a:hover {
+        background-color: var(--accent-color);
+        color: #FFFFFF;
     }
 }
 
@@ -83,12 +108,17 @@ form {
     background-color: var(--background-color);
     border: 2px solid var(--accent-color);
     border-radius: 10px;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     width: 80%;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 1.5em;
 }
+
+
 
 fieldset {
     /* Fieldset styling */
@@ -120,8 +150,16 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+input[list], select {
+    border: 2px solid var(--accent-color); /* Use alt-accent-color for the border */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 5px; /* Add some padding for better spacing */
+    font-size: 1em; /* Ensure consistent font size */
+}
+
 button {
     /* Button styling */
+    display: block;
     background-color: var(--accent-color);
     color: #FFFFFF; 
     border: none; 
@@ -134,7 +172,7 @@ button {
 
 button:hover {
     /* Button hover effect */
-    background-color: #005959;
+    background-color: hsl(180, 100%, 40%);
 }
 
 .meeting-card {
@@ -144,6 +182,7 @@ button:hover {
     border-radius: 10px;
     padding: 20px;
     margin: 10px 0;
+    max-height: 200vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -157,13 +196,23 @@ button:hover {
     position: absolute;
     top: 0;
     right: 0;
-    width: 25%;
-    height: auto;
+    width: auto;
+    height: 15vh;
 }
 
 strong, i, em {
     /* Styling for emphasized text */
     color: #008080;
+}
+
+footer {
+    display: grid; /* Apply grid layout */
+    grid-template-columns: 1fr; /* Define two equal-width columns */
+    grid-gap: 20px; /* Add spacing between grid items */
+    align-items: center; /* Align items vertically */
+    justify-items: center; /* Center items horizontally */
+    padding: 20px; /* Add padding around the footer */
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
 @media (max-width: 768px) {
